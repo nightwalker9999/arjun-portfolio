@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import '../../styles/global.css';
+
+export async function getStaticPaths() {
+  const toolEntries = await getCollection('tools');
+  return toolEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>{entry.data.name} | Deep Dive</title>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+    <body class="bg-[#0a0a0a] text-zinc-400 font-sans p-8 md:p-24 leading-relaxed">
+        <main class="max-w-2xl mx-auto">
+            <header class="mb-16">
+                <a href="/" class="text-emerald-500 font-mono text-[10px] mb-12 block hover:italic tracking-widest uppercase">
+                    ← [BACK_TO_DASHBOARD]
+                </a>
+                <h1 class="text-white text-5xl font-bold mb-4 tracking-tight">{entry.data.name}</h1>
+                <div class="text-[10px] font-mono text-zinc-600 uppercase tracking-widest">
+                    Category: {entry.data.category} // Environment: {entry.data.relatedExperience}
+                </div>
+            </header>
+            
+            <article class="prose prose-invert prose-emerald max-w-none 
+                prose-h3:text-emerald-500 prose-h3:font-mono prose-h3:text-sm prose-h3:uppercase
+                prose-li:text-zinc-400 prose-p:text-zinc-400">
+                <Content />
+            </article>
+        </main>
+    </body>
+</html>
