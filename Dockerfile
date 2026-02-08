@@ -2,19 +2,20 @@
 FROM node:lts-alpine AS builder
 WORKDIR /app
 
-# Copy dependency files first (better caching)
-COPY package*.json ./
+# Explicitly copy the files to ensure they exist in the context
+COPY package.json ./
+# If you have a lockfile now, uncomment the line below:
+# COPY package-lock.json ./ 
+
 RUN npm install
 
-# Copy the rest and build
+# Copy everything else
 COPY . .
 RUN npm run build
 
-# Stage 2: Serve the site
+# Stage 2: Serve with Nginx
 FROM nginx:alpine AS runtime
-# Copy the custom config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-# Copy the build output
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 EXPOSE 80
