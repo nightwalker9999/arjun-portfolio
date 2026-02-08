@@ -1,60 +1,60 @@
 ---
-const skills = ["Kubernetes", "GCP", "Terraform", "Python", "Jenkins"];
+const name = "ARJUN SHARMA";
 ---
 
 <html lang="en">
 	<head>
-		<title>Arjun Sharma | DevOps Engineer</title>
-		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+		<meta charset="utf-8" />
+		<title>{name} | DevOps & Platform Engineering</title>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-[#0D0D0D] text-zinc-400 font-sans p-6 md:p-12">
+	<body class="bg-[#0a0a0a] text-zinc-400 font-sans p-6 md:p-12 leading-relaxed">
 		
-		<main class="max-w-4xl mx-auto">
+		<div class="fixed inset-0 pointer-events-none opacity-[0.02] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+
+		<main class="max-w-4xl mx-auto relative z-10">
 			<header class="mb-20">
-				<div class="font-mono text-green-500 text-xs mb-4">root@portfolio:~# whoami</div>
-				<h1 class="text-white text-5xl font-bold mb-4">Arjun Sharma</h1>
-				<p class="text-xl max-w-2xl text-zinc-500">
-					DevOps Engineer with <span class="text-zinc-200">4.5+ years of experience</span>. 
-					Expert in automating CI/CD pipelines and managing GKE clusters at scale[cite: 6, 7].
+				<div class="font-mono text-emerald-500 text-[10px] mb-4 tracking-[0.3em]">RESUME_INIT_SUCCESS</div>
+				<h1 class="text-white text-5xl font-bold mb-4 tracking-tight">{name}</h1>
+				<p class="text-xl max-w-2xl text-zinc-400">
+					DevOps Engineer with <span class="text-emerald-500/80">4.5+ years of experience</span>. 
+					Expert in cloud infrastructure (GCP, AWS), Kubernetes cluster operations, and CI/CD automation[cite: 7].
 				</p>
 			</header>
 
 			<section class="mb-24">
-				<h2 class="font-mono text-xs uppercase tracking-widest mb-8 text-zinc-600">01_Application_Architecture</h2>
-				<div class="border border-zinc-800 p-8 rounded-lg bg-zinc-900/30 text-center">
-					<div class="flex flex-wrap justify-center gap-4 items-center font-mono text-[10px]">
-						<div class="p-4 border border-zinc-700">CODE (Git)</div>
-						<span class="text-zinc-700">→</span>
-						<div class="p-4 border border-green-900 bg-green-900/10 text-green-500">JENKINS PIPELINE (25+ Stages)</div>
-						<span class="text-zinc-700">→</span>
-						<div class="p-4 border border-zinc-700">DOCKER IMAGE</div>
-						<span class="text-zinc-700">→</span>
-						<div class="p-4 border border-blue-900 bg-blue-900/10 text-blue-400">GKE (Kubernetes)</div>
-					</div>
-					<p class="mt-6 text-xs italic opacity-50">Proven workflow reducing deployment manual time by ~40%[cite: 15].</p>
+				<h2 class="font-mono text-[10px] uppercase tracking-[0.3em] mb-8 text-zinc-600 border-b border-zinc-800 pb-2">01_Infrastructure_Stack</h2>
+				<div class="grid grid-cols-1 md:grid-cols-4 gap-4 font-mono text-[10px] text-center">
+					<div class="p-4 border border-zinc-800 bg-zinc-900/50">VERSION_CONTROL <br/> <span class="text-white">Git / GitHub</span> [cite: 49]</div>
+					<div class="p-4 border border-emerald-900/50 bg-emerald-900/10 text-emerald-500">CI_PIPELINE <br/> <span class="text-white">Jenkins (25+ Stages)</span> [cite: 15]</div>
+					<div class="p-4 border border-zinc-800 bg-zinc-900/50">ORCHESTRATION <br/> <span class="text-white">Docker / GKE</span> [cite: 41, 42]</div>
+					<div class="p-4 border border-zinc-800 bg-zinc-900/50">OBSERVABILITY <br/> <span class="text-white">Prometheus / Grafana</span> [cite: 46]</div>
 				</div>
+				<p class="mt-4 text-xs text-zinc-500 font-mono italic">Implemented automation reducing manual execution time by ~40%[cite: 15].</p>
 			</section>
 
 			<section class="mb-24">
-				<h2 class="font-mono text-xs uppercase tracking-widest mb-8 text-zinc-600">02_Deployment_History</h2>
+				<h2 class="font-mono text-[10px] uppercase tracking-[0.3em] mb-8 text-zinc-600 border-b border-zinc-800 pb-2">02_Experience_Log</h2>
 				<div class="space-y-12">
 					<div>
-						<h3 class="text-white font-bold">Manhattan Associates</h3>
-						<p class="text-sm font-mono text-zinc-600 mb-2">Platform Engineer | 2023 - Present </p>
-						<ul class="text-sm space-y-2 list-disc list-inside">
-							<li>Managed 60+ high-volume E2E regression runs (2K-4K shipments)[cite: 20].</li>
-							<li>Automated environment refreshes using IaC, saving 60% manual effort[cite: 17].</li>
+						<div class="flex justify-between items-end mb-2">
+							<h3 class="text-white font-bold text-lg">Manhattan Associates</h3>
+							<span class="font-mono text-[10px] text-zinc-600">OCT 2023 — PRESENT </span>
+						</div>
+						<p class="text-emerald-500/80 text-xs font-mono mb-4">DevOps Engineer / Platform Engineer [cite: 13]</p>
+						<ul class="text-sm space-y-3 text-zinc-400 max-w-2xl">
+							<li class="flex gap-3"><span>•</span> <span>Automated environment refreshes using IaC, reducing manual setup effort by ~60%[cite: 17].</span></li>
+							<li class="flex gap-3"><span>•</span> <span>Stabilized regression pipelines by executing ~60 high-volume E2E runs, driving performance defects to zero[cite: 20].</span></li>
 						</ul>
 					</div>
 				</div>
 			</section>
 
-			<footer class="font-mono text-xs pt-12 border-t border-zinc-900">
-				<a href="mailto:arjun.sharma20@outlook.com" class="text-green-500 hover:underline">EMAIL</a> // 
-				<a href="https://github.com/nightwalker9999" class="ml-4 hover:text-white">GITHUB</a> // 
-				<a href="#" class="ml-4 hover:text-white">LINKEDIN [cite: 3, 4]</a>
+			<footer class="font-mono text-[10px] pt-12 border-t border-zinc-900 flex gap-6">
+				<a href="mailto:arjun.sharma20@outlook.com" class="text-emerald-500 hover:text-white transition-colors underline decoration-emerald-500/30">EMAIL</a>
+				<a href="https://github.com/nightwalker9999" class="hover:text-white transition-colors">GITHUB</a>
+				<a href="https://linkedin.com/in/arjun27586" class="hover:text-white transition-colors">LINKEDIN [cite: 3, 4]</a>
 			</footer>
 		</main>
-
 	</body>
 </html>
