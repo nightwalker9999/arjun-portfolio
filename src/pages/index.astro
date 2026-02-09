@@ -1,6 +1,8 @@
 ---
+import { getCollection } from 'astro:content';
 import '../styles/global.css';
 const name = "ARJUN SHARMA";
+const allTools = await getCollection('tools');
 ---
 
 <html lang="en">
@@ -25,22 +27,32 @@ const name = "ARJUN SHARMA";
 
 			<section class="mb-24">
 				<h2 class="font-mono text-[10px] uppercase tracking-[0.3em] mb-8 text-zinc-600 border-b border-zinc-800 pb-2 text-left">01_Portfolio_Live_Architecture</h2>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 border border-zinc-800 bg-zinc-900/20 text-left">
-					<div class="space-y-2">
-						<span class="text-emerald-500 font-mono text-[10px]">STAGE_01: SOURCE</span>
-						<p class="text-white text-sm font-bold">GitHub & Astro</p>
-						<p class="text-[10px] opacity-50 leading-relaxed">Local development pushed to master branch. Version-controlled infrastructure and UI.</p>
-					</div>
-					<div class="space-y-2 border-l border-zinc-800 pl-8">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-8 border border-zinc-800 bg-zinc-900/20 text-left">
+					
+					<a href="/tools/docker" class="group space-y-2 hover:border-emerald-500/50 transition-all border border-transparent p-2">
+						<span class="text-emerald-500 font-mono text-[10px]">STAGE_01: BUILD</span>
+						<p class="text-white text-sm font-bold group-hover:text-emerald-400 text-left">Docker →</p>
+						<p class="text-[10px] opacity-50 leading-relaxed text-left">Multi-stage builds optimizing image footprints and security.</p>
+					</a>
+
+					<a href="/tools/jenkins" class="group space-y-2 border-l border-zinc-800 pl-6 hover:border-emerald-500/50 transition-all p-2">
 						<span class="text-emerald-500 font-mono text-[10px]">STAGE_02: CI/CD</span>
-						<p class="text-white text-sm font-bold">Docker & Railway Build</p>
-						<p class="text-[10px] opacity-50 leading-relaxed">Multi-stage Dockerfile optimizes image size. Railway triggers automated builds on every push.</p>
-					</div>
-					<div class="space-y-2 border-l border-zinc-800 pl-8">
-						<span class="text-emerald-500 font-mono text-[10px]">STAGE_03: PROD</span>
-						<p class="text-white text-sm font-bold">Nginx Server</p>
-						<p class="text-[10px] opacity-50 leading-relaxed">Containerized Nginx serving static assets with custom caching and security headers.</p>
-					</div>
+						<p class="text-white text-sm font-bold group-hover:text-emerald-400 text-left">Jenkins →</p>
+						<p class="text-[10px] opacity-50 leading-relaxed text-left">25+ stage pipelines reducing manual execution by 40%.</p>
+					</a>
+
+					<a href="/tools/gke" class="group space-y-2 border-l border-zinc-800 pl-6 hover:border-emerald-500/50 transition-all p-2">
+						<span class="text-emerald-500 font-mono text-[10px]">STAGE_03: CLOUD</span>
+						<p class="text-white text-sm font-bold group-hover:text-emerald-400 text-left">GKE →</p>
+						<p class="text-[10px] opacity-50 leading-relaxed text-left">Production cluster ops with 40% reduced cold-start delays.</p>
+					</a>
+
+					<a href="/tools/kubernetes" class="group space-y-2 border-l border-zinc-800 pl-6 hover:border-emerald-500/50 transition-all p-2">
+						<span class="text-emerald-500 font-mono text-[10px]">STAGE_04: ORCHESTRATE</span>
+						<p class="text-white text-sm font-bold group-hover:text-emerald-400 text-left">K8s →</p>
+						<p class="text-[10px] opacity-50 leading-relaxed text-left">Managing 2K-4K shipment E2E runs with zero defects.</p>
+					</a>
+
 				</div>
 			</section>
 
